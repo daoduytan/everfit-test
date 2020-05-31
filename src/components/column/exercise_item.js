@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import styles from './exercise_item.module.css';
 
 const ExerciseItem = ({ item }) => {
@@ -11,6 +12,14 @@ const ExerciseItem = ({ item }) => {
       </div>
     </div>
   );
+};
+
+ExerciseItem.propTypes = {
+  item: PropTypes.shape({
+    title: PropTypes.string,
+    times: PropTypes.number,
+    description: PropTypes.string,
+  }),
 };
 
 export default ExerciseItem;

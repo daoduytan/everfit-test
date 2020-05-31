@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import PropTypes from 'prop-types';
 
 import styles from './exercise_add.module.css';
 import FormAddItem from './exercise_add_item';
@@ -32,6 +33,11 @@ const ExerciseAdd = ({ isExerciseItemBlank, exerciseId }) => {
       ></div>
     </div>
   );
+};
+
+ExerciseAdd.propTypes = {
+  isExerciseItemBlank: PropTypes.bool,
+  exerciseId: PropTypes.number,
 };
 
 export default ExerciseAdd;

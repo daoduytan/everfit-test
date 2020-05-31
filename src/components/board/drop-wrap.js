@@ -1,5 +1,6 @@
 import React from 'react';
 import { useDrop } from 'react-dnd';
+import PropTypes from 'prop-types';
 import { useData } from '../../context';
 
 const DropWrapper = ({ children, date }) => {
@@ -24,6 +25,11 @@ const DropWrapper = ({ children, date }) => {
       {React.cloneElement(children)}
     </div>
   );
+};
+
+DropWrapper.propTypes = {
+  children: PropTypes.node,
+  date: PropTypes.string,
 };
 
 export default DropWrapper;

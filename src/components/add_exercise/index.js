@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import PropTypes from 'prop-types';
 import styles from './add_exercise.module.css';
 import AddExerciseForm from './add_exercise_form';
 
@@ -16,6 +17,10 @@ const AddExercise = ({ day }) => {
       +
     </div>
   );
+};
+
+AddExercise.propTypes = {
+  day: PropTypes.string,
 };
 
 export default AddExercise;

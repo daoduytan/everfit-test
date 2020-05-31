@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import PropTypes from 'prop-types';
 import styles from './add_exercise_form.module.css';
 import { useData } from '../../context';
 import Button from '../button';
@@ -45,6 +46,11 @@ const AddExerciseForm = ({ toggleShow, day }) => {
       </span>
     </form>
   );
+};
+
+AddExerciseForm.propTypes = {
+  toggleShow: PropTypes.func,
+  day: PropTypes.shape({}),
 };
 
 export default AddExerciseForm;

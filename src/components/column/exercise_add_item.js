@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import PropTypes from 'prop-types';
 import { useData } from '../../context';
 import { Input } from '../input';
 import Button from '../button';
@@ -78,6 +79,11 @@ const FormAddItem = ({ toggle, exerciseId }) => {
       </Button>
     </form>
   );
+};
+
+FormAddItem.propTypes = {
+  toggle: PropTypes.func,
+  exerciseId: PropTypes.number,
 };
 
 export default FormAddItem;

@@ -1,10 +1,11 @@
 import React, { useRef } from 'react';
+import PropTypes from 'prop-types';
+import { useDrag, useDrop } from 'react-dnd';
+
+import { useData } from '../../context';
 import ExerciseAdd from './exercise_add';
 import styles from './exercise.module.css';
 import ExerciseItem from './exercise_item';
-
-import { useDrag, useDrop } from 'react-dnd';
-import { useData } from '../../context';
 import Dropdown from '../dropdown';
 
 const Exercise = ({ exercise, index }) => {
@@ -97,6 +98,14 @@ const Exercise = ({ exercise, index }) => {
       />
     </div>
   );
+};
+
+Exercise.propTypes = {
+  exercise: PropTypes.shape({
+    id: PropTypes.number,
+    items: PropTypes.array,
+  }),
+  index: PropTypes.number,
 };
 
 export default Exercise;

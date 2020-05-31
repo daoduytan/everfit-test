@@ -1,5 +1,6 @@
 import React, { memo } from 'react';
 import moment from 'moment';
+import PropTypes from 'prop-types';
 import styles from './column.module.css';
 import AddExercise from '../add_exercise';
 import { useData } from '../../context';
@@ -44,6 +45,12 @@ const Column = ({ day }) => {
       </div>
     </DropWrapper>
   );
+};
+
+Column.propTypes = {
+  day: PropTypes.shape({
+    date: PropTypes.string,
+  }),
 };
 
 export default memo(Column);

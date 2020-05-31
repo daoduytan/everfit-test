@@ -1,8 +1,8 @@
-import React from 'react';
+import React, { memo } from 'react';
 
+import { useData } from '../../context';
 import styles from './board.module.css';
 import Column from '../column';
-import { useData } from '../../context';
 
 const Board = () => {
   const { dates } = useData();
@@ -16,4 +16,4 @@ const Board = () => {
   );
 };
 
-export default Board;
+export default memo(Board);
