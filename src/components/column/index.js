@@ -4,23 +4,9 @@ import styles from './column.module.css';
 import AddExercise from '../add_exercise';
 import { useData } from '../../context';
 import Exercise from './exercise';
-
-import { useDrop } from 'react-dnd';
+import DropWrapper from '../board/drop-wrap';
 
 const Column = ({ day }) => {
-  const [{ isOver }, drop] = useDrop({
-    accept: 'CARD',
-    hover(item, monitor) {
-      console.log('monitor', monitor);
-    },
-    drop: (item, monitor) => {
-      console.log(item, monitor);
-    },
-    collect: (monitor) => ({
-      isOver: !!monitor.isOver(),
-    }),
-  });
-
   const { exercises } = useData();
   const isDate = moment().format('DD/MM/YYYY') === day.date;
 
@@ -37,24 +23,26 @@ const Column = ({ day }) => {
     return false;
   });
 
-  const renderExercises = filterExercises.map((exercise, index) => (
-    <Exercise key={exercise.id} exercise={exercise} index={index} />
-  ));
-
   return (
-    <div className={styles.column} ref={drop}>
-      <div className={styles.column_title}>{day.title}</div>
+    <DropWrapper date={day.date}>
+      <div className={styles.column}>
+        <div className={styles.column_title}>{day.title}</div>
 
-      <div className={styles.column_content}>
-        <div className={classDate}>
-          {moment(day.date, 'DD/MM/YYYY').format('DD')}
+        <div className={styles.column_content}>
+          <div className={classDate}>
+            {moment(day.date, 'DD/MM/YYYY').format('DD')}
+          </div>
+
+          <div>
+            {filterExercises.map((exercise, index) => (
+              <Exercise key={exercise.id} exercise={exercise} index={index} />
+            ))}
+          </div>
+
+          <AddExercise day={day.date} />
         </div>
-
-        {renderExercises}
-
-        <AddExercise day={day.date} />
       </div>
-    </div>
+    </DropWrapper>
   );
 };
 

@@ -1,16 +1,13 @@
-import React, {
-  createContext,
-  useState,
-  useContext,
-  useCallback,
-  useEffect,
-} from 'react';
+import React, { createContext, useState, useContext, useEffect } from 'react';
 import moment from 'moment';
-import update from 'immutability-helper';
+
+import days from './days';
 
 const initialState = {
   exercises: [],
-  week: moment().week() - 1,
+  week: moment().week(),
+  dates: [],
+  loading: true,
 };
 
 const initialContext = {
@@ -26,13 +23,22 @@ const ContextProvider = ({ children }) => {
   const value = { state, setState };
 
   useEffect(() => {
-    const exercises = JSON.parse(localStorage.getItem('exercises'));
-    setState({ ...state, exercises });
-  }, []);
+    setState({ ...state, loading: true });
+    const weekStart = moment().year(2020).week(state.week).startOf('isoweek');
 
-  useEffect(() => {
-    localStorage.setItem('exercises', JSON.stringify(state.exercises));
-  }, [state.exercises]);
+    let ds = [];
+
+    for (let index = 0; index <= 6; index += 1) {
+      const dateValue = moment(weekStart)
+        .add(index, 'days')
+        .format('DD/MM/YYYY');
+
+      ds = [...ds, dateValue];
+    }
+    const dates = days.map((day, index) => ({ ...day, date: ds[index] }));
+
+    setState({ ...state, dates, loading: false });
+  }, [state.week]);
 
   return <Context.Provider value={value}>{children}</Context.Provider>;
 };
@@ -59,28 +65,32 @@ const useData = () => {
     setState({ ...state, exercises: new_exercises });
   };
 
-  const moveExercises = useCallback(
-    (dragIndex, hoverIndex) => {
-      const dragExercises = state.exercises[dragIndex];
+  const moveExercises = (dragIndex, hoverIndex) => {
+    const item = state.exercises[dragIndex];
 
-      if (!dragIndex) return null;
+    const newItems = state.exercises.filter((i, idx) => idx !== dragIndex);
 
-      const exercises = update(state.exercises, {
-        $splice: [
-          [dragIndex, 1],
-          [hoverIndex, 0, dragExercises],
-        ],
-      });
+    newItems.splice(hoverIndex, 0, item);
 
-      setState({ ...state, exercises });
-    },
-    [state, setState]
-  );
+    setState({ ...state, exercises: newItems });
+  };
+
+  const onDrop = (item, date) => {
+    const newItems = state.exercises
+      .filter((i) => i.id !== item.id)
+      .concat({ ...item, day: date });
+
+    setState({ ...state, exercises: newItems });
+  };
 
   const removeExercise = (id) => {
     const exercises = state.exercises.filter((exercise) => exercise.id !== id);
 
     setState({ ...state, exercises });
+  };
+
+  const setWeek = (week) => {
+    setState({ ...state, week });
   };
 
   return {
@@ -89,6 +99,8 @@ const useData = () => {
     addExercisesItem,
     moveExercises,
     removeExercise,
+    setWeek,
+    onDrop,
   };
 };
 

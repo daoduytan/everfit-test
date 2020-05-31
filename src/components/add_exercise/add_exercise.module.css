@@ -1,5 +1,6 @@
 .add {
-  background: #eee;
+  background: #efefef;
+  border: 1px dashed #eee;
   text-align: center;
   padding: 5px 10px;
   border-radius: 3px;
