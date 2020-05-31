@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/everfit-test/static/css/main.62d31bb9.chunk.css",
+    "main.js": "/everfit-test/static/js/main.85d8c844.chunk.js",
+    "main.js.map": "/everfit-test/static/js/main.85d8c844.chunk.js.map",
+    "runtime-main.js": "/everfit-test/static/js/runtime-main.ddff182e.js",
+    "runtime-main.js.map": "/everfit-test/static/js/runtime-main.ddff182e.js.map",
+    "static/js/2.f7a8378b.chunk.js": "/everfit-test/static/js/2.f7a8378b.chunk.js",
+    "static/js/2.f7a8378b.chunk.js.map": "/everfit-test/static/js/2.f7a8378b.chunk.js.map",
+    "index.html": "/everfit-test/index.html",
+    "precache-manifest.a70bc01c5cdcae0534f0b149727c6a49.js": "/everfit-test/precache-manifest.a70bc01c5cdcae0534f0b149727c6a49.js",
+    "service-worker.js": "/everfit-test/service-worker.js",
+    "static/css/main.62d31bb9.chunk.css.map": "/everfit-test/static/css/main.62d31bb9.chunk.css.map",
+    "static/js/2.f7a8378b.chunk.js.LICENSE.txt": "/everfit-test/static/js/2.f7a8378b.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.ddff182e.js",
+    "static/js/2.f7a8378b.chunk.js",
+    "static/css/main.62d31bb9.chunk.css",
+    "static/js/main.85d8c844.chunk.js"
+  ]
+}
