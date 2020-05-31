@@ -1,0 +1,32 @@
+.column {
+  display: flex;
+  flex-direction: column;
+  float: left;
+  width: calc(100% / 7 - 12px);
+  height: calc(100vh - 80px);
+  padding: 15px 6px;
+}
+
+.column_title {
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.column_date {
+  color: #728096;
+  font-size: 12px;
+  margin-bottom: 10px;
+}
+.column_date_active {
+  color: #5a57cb;
+  font-weight: 700;
+}
+
+.column_content {
+  background: #f3f5f8;
+  border-radius: 3px;
+  padding: 5px 5px 30px 5px;
+  flex: 1;
+  overflow-y: auto;
+}

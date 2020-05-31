@@ -1,0 +1,22 @@
+.dropdown {
+  position: relative;
+}
+
+.dropdown_menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  z-index: 100;
+  background: #fff;
+  border: 1px solid rgba(34, 36, 38, 0.15);
+  box-sizing: border-box;
+  border-radius: 6px;
+  margin-bottom: 5px;
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.dropdown:hover .dropdown_menu {
+  display: block;
+}

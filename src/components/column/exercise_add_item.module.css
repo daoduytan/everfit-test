@@ -1,0 +1,8 @@
+.close {
+  color: #ddd;
+  cursor: pointer;
+}
+
+.close:hover {
+  color: #333;
+}
