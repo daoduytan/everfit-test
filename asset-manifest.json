@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/everfit-test/static/css/main.166ec5a5.chunk.css",
-    "main.js": "/everfit-test/static/js/main.e855e425.chunk.js",
-    "main.js.map": "/everfit-test/static/js/main.e855e425.chunk.js.map",
+    "main.js": "/everfit-test/static/js/main.8e94ce5e.chunk.js",
+    "main.js.map": "/everfit-test/static/js/main.8e94ce5e.chunk.js.map",
     "runtime-main.js": "/everfit-test/static/js/runtime-main.ddff182e.js",
     "runtime-main.js.map": "/everfit-test/static/js/runtime-main.ddff182e.js.map",
     "static/js/2.ff1a911c.chunk.js": "/everfit-test/static/js/2.ff1a911c.chunk.js",
     "static/js/2.ff1a911c.chunk.js.map": "/everfit-test/static/js/2.ff1a911c.chunk.js.map",
     "index.html": "/everfit-test/index.html",
-    "precache-manifest.b3cdb8a90def657eabf9cd0c929561d6.js": "/everfit-test/precache-manifest.b3cdb8a90def657eabf9cd0c929561d6.js",
+    "precache-manifest.fe031364b0f59af2fd3152a7012898ca.js": "/everfit-test/precache-manifest.fe031364b0f59af2fd3152a7012898ca.js",
     "service-worker.js": "/everfit-test/service-worker.js",
     "static/css/main.166ec5a5.chunk.css.map": "/everfit-test/static/css/main.166ec5a5.chunk.css.map",
     "static/js/2.ff1a911c.chunk.js.LICENSE.txt": "/everfit-test/static/js/2.ff1a911c.chunk.js.LICENSE.txt"
@@ -17,6 +17,6 @@
     "static/js/runtime-main.ddff182e.js",
     "static/js/2.ff1a911c.chunk.js",
     "static/css/main.166ec5a5.chunk.css",
-    "static/js/main.e855e425.chunk.js"
+    "static/js/main.8e94ce5e.chunk.js"
   ]
 }
