@@ -11,13 +11,14 @@
 .exercise_item_title {
   text-align: right;
   font-weight: 600;
-  font-size: 14px;
+  font-size: 12px;
   line-height: 18px;
   text-align: right;
   color: #000000;
   text-overflow: ellipsis;
   overflow: hidden;
   text-transform: capitalize;
+  white-space: nowrap;
 }
 
 .content {
