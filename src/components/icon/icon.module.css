@@ -1,0 +1,41 @@
+/* plus */
+.plus {
+  position: relative;
+  display: inline-block;
+  height: 6px;
+}
+
+.plus i {
+  position: absolute;
+  display: inline-block;
+  width: 6px;
+  height: 2px;
+  margin-left: -3px;
+  margin-bottom: -1px;
+}
+
+.plus i:nth-child(1) {
+  left: 50%;
+  bottom: 50%;
+}
+.plus i:nth-child(2) {
+  left: 50%;
+  bottom: 50%;
+
+  transform: rotate(90deg);
+}
+
+/* dots */
+
+.dots {
+  display: flex;
+  align-items: center;
+}
+
+.dots i {
+  display: inline-block;
+  border-radius: 4px;
+  width: 4px;
+  height: 4px;
+  margin-left: 2px;
+}

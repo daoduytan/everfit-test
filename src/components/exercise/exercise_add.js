@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 
 import styles from './exercise_add.module.css';
 import FormAddItem from './exercise_add_item';
+import { Plus } from '../icon';
 
 const ExerciseAdd = ({ isExerciseItemBlank, exerciseId }) => {
   const [show, setShow] = useState(false);
@@ -26,11 +27,9 @@ const ExerciseAdd = ({ isExerciseItemBlank, exerciseId }) => {
         </div>
       )}
 
-      <div
-        className={styles.button_add}
-        style={style}
-        onClick={toggleShow}
-      ></div>
+      <div className={styles.button_add} onClick={toggleShow}>
+        <Plus />
+      </div>
     </div>
   );
 };

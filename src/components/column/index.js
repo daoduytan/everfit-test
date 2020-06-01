@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import styles from './column.module.css';
 import AddExercise from '../add_exercise';
 import { useData } from '../../context';
-import Exercise from './exercise';
+import Exercise from '../exercise';
 import DropWrapper from '../board/drop-wrap';
 
 const Column = ({ day }) => {

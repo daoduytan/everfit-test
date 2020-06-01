@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap');
 
 :root {
-  --main-bg-color: pink;
-  --color-text: #333;
+  --main-color: #5a57cb;
+  --border-color: rgba(34, 36, 38, 0.15);
 }
 
 * {

@@ -31,7 +31,7 @@ const AddExerciseForm = ({ toggleShow, day }) => {
   return (
     <form onSubmit={handleSubmit}>
       <div style={{ marginBottom: 10 }}>
-        <Input onChange={onChangetext} />
+        <Input onChange={onChangetext} autoFocus />
       </div>
 
       <Button type="primary" style={{ marginRight: 10 }}>
@@ -50,7 +50,7 @@ const AddExerciseForm = ({ toggleShow, day }) => {
 
 AddExerciseForm.propTypes = {
   toggleShow: PropTypes.func,
-  day: PropTypes.shape({}),
+  day: PropTypes.string,
 };
 
 export default AddExerciseForm;

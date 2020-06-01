@@ -7,6 +7,7 @@ import ExerciseAdd from './exercise_add';
 import styles from './exercise.module.css';
 import ExerciseItem from './exercise_item';
 import Dropdown from '../dropdown';
+import { Dot } from '../icon';
 
 const Exercise = ({ exercise, index }) => {
   const { moveExercises, removeExercise } = useData();
@@ -60,6 +61,7 @@ const Exercise = ({ exercise, index }) => {
 
   const style = {
     opacity: isDragging ? 0 : 1,
+    cursor: isDragging ? 'grabbing' : 'pointer',
   };
 
   const handleRemoveExercise = () => {
@@ -74,9 +76,7 @@ const Exercise = ({ exercise, index }) => {
           <Dropdown
             title={
               <div className={styles.dots}>
-                <span />
-                <span />
-                <span />
+                <Dot color="#C4C4C4" />
               </div>
             }
             menu={

@@ -10,24 +10,27 @@
 .column_title {
   text-transform: uppercase;
   margin-bottom: 10px;
+  font-size: 10px;
   font-weight: 600;
   color: #6a7988;
 }
 
 .column_date {
   color: #728096;
-  font-size: 12px;
+  font-size: 11px;
   margin-bottom: 10px;
 }
+
 .column_date_active {
   color: #5a57cb;
   font-weight: 700;
 }
 
 .column_content {
-  background: #f3f5f8;
-  border-radius: 3px;
-  padding: 5px 5px 30px 5px;
+  background: rgba(243, 245, 248, 0.8);
+  padding: 7px 5px 30px 5px;
   flex: 1;
   overflow-y: auto;
+  mix-blend-mode: normal;
+  border-radius: 6px;
 }

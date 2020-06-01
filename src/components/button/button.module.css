@@ -6,6 +6,10 @@
   cursor: pointer;
 }
 
+.large {
+  padding: 10px;
+}
+
 .primary {
   color: #fff;
   background: #5a57cb;
