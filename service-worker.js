@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/everfit-test/precache-manifest.9f52ecf5b98aeed6f31c0d6f0dba6ebf.js"
+  "/everfit-test/precache-manifest.b3cdb8a90def657eabf9cd0c929561d6.js"
 );
 
 self.addEventListener('message', (event) => {
